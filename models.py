@@ -1,5 +1,4 @@
 from flask_sqlalchemy import SQLAlchemy
-name = db.Column(db.String(140), unique=True, nullable=False)
 district = db.Column(db.String(120))
 province = db.Column(db.String(120))
 users = db.relationship('User', backref='facility', lazy=True)
