@@ -1,0 +1,1778 @@
+                        <div style="font-size: 14px; color: #4a5568; margin-bottom: 15px;">
+                            <strong>Visit Notes:</strong> Scheduled for 6-month test. Mother agreed to bring child next week.
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-success" onclick="approveUpdate(2)">Approve</button>
+                            <button class="btn btn-secondary" onclick="rejectUpdate(2)">Reject</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Referrals -->
+            <div class="content-area hide" id="referralsPage">
+                <div class="toolbar">
+                    <h3>Referrals Management</h3>
+                    <button class="btn btn-success" onclick="showCreateReferral()">+ Create Referral</button>
+                </div>
+                <div style="margin-top: 20px;">
+                    <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <div style="font-weight: 600; color: #2d3748;">Mary Mwape - Confirmatory Test</div>
+                            <span class="status-badge status-grace">ACTIVE</span>
+                        </div>
+                        <div style="font-size: 14px; color: #4a5568;">
+                            <strong>From:</strong> Kabuta RHC<br>
+                            <strong>To:</strong> Nchelenge RHC<br>
+                            <strong>Reason:</strong> NAT testing not available at facility<br>
+                            <strong>Date:</strong> 2024-12-05
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facilities -->
+            <div class="content-area hide" id="facilitiesPage">
+                <div class="toolbar">
+                    <h3>Facilities Management</h3>
+                    <button class="btn btn-success" onclick="showAddFacility()">+ Add Facility</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Facility Name</th>
+                            <th>Hub</th>
+                            <th>District</th>
+                            <th>Supervisor</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kabuta Rural Health Centre</td>
+                            <td>Nchelenge Hub</td>
+                            <td>Nchelenge District</td>
+                            <td>John Banda</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="btn btn-primary" style="padding: 6px 12px; font-size: 12px;">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Kashikishi Affiliated Health Centre</td>
+                            <td>Nchelenge Hub</td>
+                            <td>Nchelenge District</td>
+                            <td>Not Assigned</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="btn btn-primary" style="padding: 6px 12px; font-size: 12px;">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Users -->
+            <div class="content-area hide" id="usersPage">
+                <div class="toolbar">
+                    <h3>User Management</h3>
+                    <button class="btn btn-success" onclick="showAddUser()">+ Add User</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Role</th>
+                            <th>Facility</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Banda</td>
+                            <td>supervisor</td>
+                            <td>Facility Supervisor</td>
+                            <td>Kabuta RHC</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="btn btn-primary" style="padding: 6px 12px; font-size: 12px;">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Musonda</td>
+                            <td>counsellor</td>
+                            <td>Lay Counsellor</td>
+                            <td>Kabuta RHC</td>
+                            <td><span class="status-badge status-active">Active</span></td>
+                            <td><button class="btn btn-primary" style="padding: 6px 12px; font-size: 12px;">Edit</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Reports -->
+            <div class="content-area hide" id="reportsPage">
+                <h3>Reports & Analytics</h3>
+                
+                <div style="margin-top: 30px;">
+                    <h4 style="margin-bottom: 20px; color: #667eea;">📋 Standard Reports</h4>
+                    
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Due/Overdue Tests Report</div>
+                                <div style="font-size: 14px; color: #718096;">View all tests due or overdue by week, month, or quarter</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Week</option>
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Completion Rate Report</div>
+                                <div style="font-size: 14px; color: #718096;">Test completion rates by facility and time period</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>Last 3 Months</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Positive Cases Report</div>
+                                <div style="font-size: 14px; color: #718096;">All positive cases and confirmatory test status</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Exceptions Report</div>
+                                <div style="font-size: 14px; color: #718096;">Missed tests, lost to follow-up, deaths, and transfers</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Grace Period Report</div>
+                                <div style="font-size: 14px; color: #718096;">Tests currently in grace period (overdue but not yet missed)</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Facility Performance Report</div>
+                                <div style="font-size: 14px; color: #718096;">Comprehensive facility comparison and performance metrics</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 40px 0 20px 0; color: #667eea;">📊 Outcome & Completion Reports</h4>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Final Outcome Status Report</div>
+                                <div style="font-size: 14px; color: #718096;">Final HIV status by month: Negative, Positive, Indeterminate, Lost, Died, Transferred</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>January 2025</option>
+                                    <option>December 2024</option>
+                                    <option>November 2024</option>
+                                    <option>All Time</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Completed at 12 Months Report</div>
+                                <div style="font-size: 14px; color: #718096;">Children who completed all tests by 12 months of age</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Completed at 18 Months Report</div>
+                                <div style="font-size: 14px; color: #718096;">Children who completed all tests by 18 months of age</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Completed at 24 Months Report</div>
+                                <div style="font-size: 14px; color: #718096;">Children who completed full EID program by 24 months (program completion)</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Expected vs Actual Completion Report</div>
+                                <div style="font-size: 14px; color: #718096;">Compare expected completions vs actual, show missed/incomplete with reasons</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>This Month</option>
+                                    <option>This Quarter</option>
+                                    <option>This Year</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 style="margin: 40px 0 20px 0; color: #667eea;">📈 Analysis Reports</h4>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Monthly Outcome Analysis</div>
+                                <div style="font-size: 14px; color: #718096;">By month: Started, Completed, Positive, Negative, Missed/Lost</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>January 2025</option>
+                                    <option>December 2024</option>
+                                    <option>Last 6 Months</option>
+                                    <option>Last 12 Months</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Cohort Analysis Report</div>
+                                <div style="font-size: 14px; color: #718096;">Track children by birth month cohort, compare completion rates across cohorts</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>Q4 2024 Cohort</option>
+                                    <option>Q3 2024 Cohort</option>
+                                    <option>Q2 2024 Cohort</option>
+                                    <option>All Cohorts</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="report-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 250px;">
+                                <div style="font-weight: 600; color: #2d3748; font-size: 16px; margin-bottom: 5px;">Comprehensive Monthly Summary</div>
+                                <div style="font-size: 14px; color: #718096;">Complete monthly summary with all key metrics and indicators</div>
+                            </div>
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                <select style="padding: 8px; border-radius: 6px; border: 1px solid #ddd;">
+                                    <option>January 2025</option>
+                                    <option>December 2024</option>
+                                    <option>November 2024</option>
+                                </select>
+                                <button class="btn btn-primary">📥 Excel</button>
+                                <button class="btn btn-secondary">📄 PDF</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    
+    <!-- Add Child Modal -->
+    <div class="modal" id="addChildModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Register New Child</h3>
+                <button class="close-btn" onclick="closeModal('addChildModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Child's Full Name *</label>
+                    <input type="text" id="childName" placeholder="Enter child's name">
+                </div>
+                <div class="form-group">
+                    <label>Date of Birth *</label>
+                    <input type="date" id="childDOB">
+                </div>
+                <div class="form-group">
+                    <label>Sex *</label>
+                    <select id="childSex">
+                        <option value="">Select sex</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Primary Caregiver Name *</label>
+                    <input type="text" id="caregiverName" placeholder="Mother/Guardian name">
+                </div>
+                <div class="form-group">
+                    <label>Caregiver ART Number *</label>
+                    <input type="text" id="artNumber" placeholder="Enter ART number">
+                </div>
+                <div class="form-group">
+                    <label>Caregiver DOB or Age *</label>
+                    <input type="date" id="caregiverDOB">
+                </div>
+                <div class="form-group">
+                    <label>Relationship to Child *</label>
+                    <select id="relationship">
+                        <option value="">Select relationship</option>
+                        <option value="Mother">Mother</option>
+                        <option value="Father">Father</option>
+                        <option value="Guardian">Guardian</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Village *</label>
+                    <input type="text" id="village" placeholder="Enter village name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="phone" placeholder="+260977123456">
+                </div>
+                <div class="form-group">
+                    <label>Alternative Contact *</label>
+                    <input type="tel" id="altPhone" placeholder="+260966555444">
+                </div>
+                <div class="form-group">
+                    <label>Enrolled in PMTCT Program? *</label>
+                    <select id="pmtct">
+                        <option value="">Select option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Received Postnatal Prophylaxis? *</label>
+                    <select id="prophylaxis">
+                        <option value="">Select option</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button class="btn btn-success" style="flex: 1;" onclick="saveChild()">Save Child</button>
+                    <button class="btn btn-secondary" style="flex: 1;" onclick="closeModal('addChildModal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Child Details Modal -->
+    <div class="modal" id="childDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="childDetailsTitle">Child Details</h3>
+                <button class="close-btn" onclick="closeModal('childDetailsModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-back" onclick="closeModal('childDetailsModal')" style="margin-bottom: 20px;">← Back</button>
+                <div id="childDetailsContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Month Details Modal -->
+    <div class="modal" id="monthDetailsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="monthDetailsTitle">Month Details</h3>
+                <button class="close-btn" onclick="closeModal('monthDetailsModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-back" onclick="closeModal('monthDetailsModal')" style="margin-bottom: 20px;">← Back</button>
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <button class="btn btn-primary">📥 Export Excel</button>
+                    <button class="btn btn-secondary">📄 Export PDF</button>
+                </div>
+                <div id="monthDetailsContent">
+                    <p style="color: #718096;">Children due in this month will be displayed here with detailed test information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Account</h3>
+                <button class="close-btn" onclick="closeModal('registerModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>NRC Number (Optional)</label>
+                    <input type="text" placeholder="000000/00/0">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number (Optional)</label>
+                    <input type="tel" placeholder="+260977123456">
+                </div>
+                <div class="form-group">
+                    <label>Email (Optional)</label>
+                    <input type="email" placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Username *</label>
+                    <input type="text" placeholder="Choose username">
+                </div>
+                <div class="form-group">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Minimum 8 characters">
+                </div>
+                <div class="form-group">
+                    <label>Role *</label>
+                    <select>
+                        <option>Select role</option>
+                        <option>Community Counsellor</option>
+                        <option>Facility Supervisor</option>
+                        <option>Hub Coordinator</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Facility *</label>
+                    <select>
+                        <option>Select facility</option>
+                        <option>Kabuta Rural Health Centre</option>
+                        <option>Kashikishi Affiliated Health Centre</option>
+                        <option>Nchelenge Rural Health Centre</option>
+                    </select>
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button class="btn btn-success" style="flex: 1;" onclick="submitRegistration()">Submit</button>
+                    <button class="btn btn-secondary" style="flex: 1;" onclick="closeModal('registerModal')">Cancel</button>
+                </div>
+                <p style="margin-top: 15px; font-size: 13px; color: #718096; text-align: center;">
+                    Your account will be pending approval from a supervisor or coordinator.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Referral Modal -->
+    <div class="modal" id="createReferralModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Create Referral</h3>
+                <button class="close-btn" onclick="closeModal('createReferralModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Select Child *</label>
+                    <select>
+                        <option>Select child</option>
+                        <option>Mary Mwape</option>
+                        <option>John Mwansa</option>
+                        <option>Grace Mutale</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Refer To Facility *</label>
+                    <select>
+                        <option>Select facility</option>
+                        <option>Nchelenge RHC</option>
+                        <option>Kashikishi AHC</option>
+                        <option>UTH</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Reason for Referral *</label>
+                    <textarea rows="3" placeholder="Enter reason for referral"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Referral Date *</label>
+                    <input type="date">
+                </div>
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
+                    <button class="btn btn-success" style="flex: 1;" onclick="saveReferral()">Create Referral</button>
+                    <button class="btn btn-secondary" style="flex: 1;" onclick="closeModal('createReferralModal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentRole = 'supervisor';
+
+        const childrenData = [
+            {
+                id: 1,
+                name: 'Mary Mwape',
+                mother: 'Grace Banda',
+                dob: '2024-10-15',
+                village: 'Kashikishi',
+                phone: '+260977123456',
+                art: 'KB/2024/001',
+                tests: [
+                    { stage: 'Birth', due: '2024-10-17', done: '2024-10-16', result: 'Negative', status: 'completed' },
+                    { stage: '6 Weeks', due: '2024-11-26', done: '2024-11-25', result: 'Positive', status: 'completed' },
+                    { stage: 'Confirmatory', due: '2024-12-09', done: null, result: null, status: 'overdue' }
+                ]
+            },
+            {
+                id: 2,
+                name: 'John Mwansa',
+                mother: 'Ruth Chanda',
+                dob: '2024-09-20',
+                village: 'Nchelenge',
+                phone: '+260966555444',
+                art: 'NC/2024/015',
+                tests: [
+                    { stage: 'Birth', due: '2024-09-22', done: '2024-09-21', result: 'Negative', status: 'completed' },
+                    { stage: '6 Weeks', due: '2024-11-01', done: '2024-11-01', result: 'Negative', status: 'completed' },
+                    { stage: '6 Months', due: '2025-03-20', done: null, result: null, status: 'due' }
+                ]
+            }
+        ];
+
+        function login() {
+            const username = document.getElementById('username').value.toLowerCase();
+            const password = document.getElementById('password').value;
+
+            if (!username || !password) {
+                alert('Please enter username and password');
+                return;
+            }
+
+            // Demo: Any password works
+            currentRole = username.includes('coord') || username === 'admin' ? 'coordinator' : 
+                         username.includes('super') || username.includes('sio') ? 'supervisor' : 'counsellor';
+
+            if (currentRole === 'counsellor') {
+                document.getElementById('workflowSection').style.display = 'none';
+                document.getElementById('adminSection').style.display = 'none';
+            } else if (currentRole === 'supervisor') {
+                document.getElementById('workflowSection').style.display = 'block';
+                document.getElementById('adminSection').style.display = 'none';
+            } else {
+                document.getElementById('workflowSection').style.display = 'block';
+                document.getElementById('adminSection').style.display = 'block';
+            }
+
+            document.getElementById('loginPage').style.display = 'none';
+            document.getElementById('mainApp').style.display = 'block';
+            renderChildren();
+        }
+
+        function logout() {
+            if (!confirm('Logout?')) return;
+            document.getElementById('mainApp').style.display = 'none';
+            document.getElementById('loginPage').style.display = 'flex';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        }
+
+        function toggleSection(el) {
+            el.nextElementSibling.classList.toggle('collapsed');
+            el.classList.toggle('collapsed');
+        }
+
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+
+        function navigateTo(page) {
+            document.querySelectorAll('.content-area').forEach(p => p.classList.add('hide'));
+            document.querySelectorAll('.menu-item').forEach(m => m.classList.remove('active'));
+            
+            const pageMap = {
+                dashboard: 'dashboardPage',
+                children: 'childrenPage',
+                tests: 'testsPage',
+                analysis: 'analysisPage',
+                notifications: 'notificationsPage',
+                approvals: 'approvalsPage',
+                referrals: 'referralsPage',
+                facilities: 'facilitiesPage',
+                users: 'usersPage',
+                reports: 'reportsPage'
+            };
+
+            document.getElementById(pageMap[page]).classList.remove('hide');
+            document.getElementById('pageTitle').textContent = page.charAt(0).toUpperCase() + page.slice(1);
+            document.getElementById('breadcrumbCurrent').textContent = page.charAt(0).toUpperCase() + page.slice(1);
+            
+            if (event && event.currentTarget) event.currentTarget.classList.add('active');
+            if (window.innerWidth <= 768) toggleMenu();
+
+            if (page === 'children') renderChildrenList();
+            if (page === 'tests') renderTests();
+        }
+
+        function renderChildren() {
+            const container = document.getElementById('childrenContainer');
+            container.innerHTML = childrenData.map(child => {
+                const urgent = child.tests.find(t => t.stage === 'Confirmatory' && !t.done);
+                const completedCount = child.tests.filter(t => t.status === 'completed').length;
+                
+                return `
+                    <div class="child-card" onclick="showChildDetails(${child.id})">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px; flex-wrap: wrap; gap: 10px;">
+                            <div class="child-name">${child.name}</div>
+                            ${urgent ? '<span class="status-badge status-urgent">CONFIRMATORY URGENT</span>' : ''}
+                        </div>
+                        <div class="child-info-grid">
+                            <div><span class="info-label">Mother:</span> ${child.mother}</div>
+                            <div><span class="info-label">DOB:</span> ${child.dob}</div>
+                            <div><span class="info-label">Village:</span> ${child.village}</div>
+                            <div><span class="info-label">Phone:</span> ${child.phone}</div>
+                            <div><span class="info-label">ART:</span> ${child.art}</div>
+                            <div><span class="info-label">Progress:</span> ${completedCount}/${child.tests.length}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderChildrenList() {
+            const container = document.getElementById('childrenListContainer');
+            container.innerHTML = childrenData.map(child => {
+                return `
+                    <div class="child-card" onclick="showChildDetails(${child.id})">
+                        <div class="child-name" style="margin-bottom: 15px;">${child.name}</div>
+                        <div class="child-info-grid">
+                            <div><span class="info-label">Mother:</span> ${child.mother}</div>
+                            <div><span class="info-label">DOB:</span> ${child.dob}</div>
+                            <div><span class="info-label">Village:</span> ${child.village}</div>
+                            <div><span class="info-label">Phone:</span> ${child.phone}</div>
+                            <div><span class="info-label">ART:</span> ${child.art}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderTests() {
+            const container = document.getElementById('testsContainer');
+            let allTests = [];
+            childrenData.forEach(child => {
+                child.tests.forEach(test => {
+                    allTests.push({...test, childName: child.name, childId: child.id});
+                });
+            });
+
+            container.innerHTML = allTests.map(test => {
+                return `
+                    <div style="background: #f7fafc; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 2px solid #e2e8f0;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                            <div style="font-weight: 600;">${test.childName} - ${test.stage}</div>
+                            <span class="status-badge status-${test.status}">${test.status}</span>
+                        </div>
+                        <div style="font-size: 14px; color: #718096;">
+                            <strong>Due:</strong> ${test.due}
+                            ${test.done ? `<br><strong>Done:</strong> ${test.done}` : ''}
+                            ${test.result ? `<br><strong>Result:</strong> ${test.result}` : ''}
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 10px; padding: 6px 12px; font-size: 12px;">Update Test</button>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function filterByStatus(status) {
+            alert('Filter by ' + status + ' - This will show only children with tests matching this status');
+        }
+
+        function showChildDetails(childId) {
+            const child = childrenData.find(c => c.id === childId);
+            document.getElementById('childDetailsTitle').textContent = child.name + ' - Test Schedule';
+            
+            const content = `
+                <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div><strong>Child:</strong> ${child.name}</div>
+                        <div><strong>Mother:</strong> ${child.mother}</div>
+                        <div><strong>DOB:</strong> ${child.dob}</div>
+                        <div><strong>Village:</strong> ${child.village}</div>
+                        <div><strong>Phone:</strong> ${child.phone}</div>
+                        <div><strong>ART:</strong> ${child.art}</div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 15px;">EID Test Timeline</h4>
+
+                ${child.tests.map(test => {
+                    const borderColor = test.status === 'completed' ? '#48bb78' : 
+                                       test.status === 'overdue' ? '#f56565' : '#e2e8f0';
+                    const bgColor = test.status === 'overdue' ? '#fff5f5' : 'white';
+                    
+                    return `
+                        <div style="border-left: 3px solid ${borderColor}; margin-left: 20px; padding-left: 20px; margin-bottom: 15px; background: ${bgColor}; padding: 15px; border-radius: 8px;">
+                            <div style="font-weight: 600; color: #2d3748; margin-bottom: 5px;">
+                                ${test.status === 'completed' ? '✓' : test.status === 'overdue' ? '⚠️' : '○'} ${test.stage}
+                            </div>
+                            <div style="font-size: 14px; color: #718096;">
+                                <strong>Due Date:</strong> ${test.due}<br>
+                                ${test.done ? `<strong>Done Date:</strong> ${test.done}<br>` : ''}
+                                ${test.result ? `<strong>Result:</strong> <span style="color: ${test.result === 'Positive' ? '#f56565' : '#48bb78'}; font-weight: 600;">${test.result}</span>` : '<strong>Status:</strong> Pending'}
+                            </div>
+                            ${!test.done ? `<button class="btn btn-primary" style="margin-top: 10px; padding: 6px 12px; font-size: 12px;">Update Test</button>` : ''}
+                        </div>
+                    `;
+                }).join('')}
+            `;
+            
+            document.getElementById('childDetailsContent').innerHTML = content;
+            document.getElementById('childDetailsModal').style.display = 'flex';
+        }
+
+        function showMonthDetails(month) {
+            document.getElementById('monthDetailsTitle').textContent = month + ' 2025 - Children Due';
+            document.getElementById('monthDetailsModal').style.display = 'flex';
+        }
+
+        function showAddChild() {
+            document.getElementById('addChildModal').style.display = 'flex';
+        }
+
+        function showRegister() {
+            document.getElementById('registerModal').style.display = 'flex';
+        }
+
+        function showForgotPassword() {
+            alert('Password Reset\n\nEnter your email or phone number to receive a reset link via SMS/Email.\n\nThis feature will send a secure link to create a new password.');
+        }
+
+        function showCreateReferral() {
+            document.getElementById('createReferralModal').style.display = 'flex';
+        }
+
+        function showAddFacility() {
+            alert('Add Facility\n\nThis will open a form to add a new health facility to the system.');
+        }
+
+        function showAddUser() {
+            alert('Add User\n\nThis will open a form to create a new user account with appropriate role and permissions.');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        function saveChild() {
+            const name = document.getElementById('childName').value;
+            const dob = document.getElementById('childDOB').value;
+            
+            if (!name || !dob) {
+                alert('Please fill all required fields');
+                return;
+            }
+
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                closeModal('addChildModal');
+                alert('✅ Child registered successfully!\n\nEID test schedule has been automatically generated for all stages (Birth, 6W, 6M, 9M, 12M, 18M, 24M).');
+                
+                // Clear form
+                document.getElementById('childName').value = '';
+                document.getElementById('childDOB').value = '';
+                document.getElementById('childSex').value = '';
+                document.getElementById('caregiverName').value = '';
+                document.getElementById('artNumber').value = '';
+                document.getElementById('caregiverDOB').value = '';
+                document.getElementById('relationship').value = '';
+                document.getElementById('village').value = '';
+                document.getElementById('phone').value = '';
+                document.getElementById('altPhone').value = '';
+                document.getElementById('pmtct').value = '';
+                document.getElementById('prophylaxis').value = '';
+            }, 1500);
+        }
+
+        function submitRegistration() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                closeModal('registerModal');
+                alert('✅ Registration Submitted!\n\nYour account is pending approval from a supervisor or coordinator. You will receive an SMS notification once approved.');
+            }, 1500);
+        }
+
+        function saveReferral() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                closeModal('createReferralModal');
+                alert('✅ Referral Created!\n\nThe receiving facility has been notified and will receive the child\'s information.');
+            }, 1500);
+        }
+
+        function approveUpdate(id) {
+            if (!confirm('Approve this update?')) return;
+            
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                alert('✅ Update Approved!\n\nThe counsellor has been notified.');
+            }, 1000);
+        }
+
+        function rejectUpdate(id) {
+            const reason = prompt('Enter reason for rejection:');
+            if (!reason) return;
+            
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                alert('✅ Update Rejected!\n\nThe counsellor has been notified with your feedback.');
+            }, 1000);
+        }
+
+        function searchChildren(query) {
+            const cards = document.querySelectorAll('#childrenListContainer .child-card');
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query.toLowerCase()) ? 'block' : 'none';
+            });
+        }
+
+        function filterTests() {
+            const filter = document.getElementById('testFilter').value;
+            alert('Filter tests by: ' + filter);
+        }
+
+        // Initialize
+        window.onload = function() {
+            const sections = document.querySelectorAll('.menu-section-title');
+            sections.forEach((section, index) => {
+                if (index > 0) {
+                    section.classList.add('collapsed');
+                    section.nextElementSibling.classList.add('collapsed');
+                }
+            });
+        }
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                document.getElementById('sidebar').classList.remove('active');
+                document.getElementById('overlay').classList.remove('active');
+            }
+        });
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EID Tracking System - Complete Prototype</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            overflow-x: hidden;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(72, 187, 120, 0.3);
+            border-top: 5px solid #48bb78;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Login Page */
+        .login-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-box {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .login-header h1 {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #718096;
+            color: white;
+        }
+
+        .btn-back {
+            background: #e2e8f0;
+            color: #4a5568;
+            padding: 8px 16px;
+            font-size: 13px;
+        }
+
+        .login-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 14px;
+            margin: 0 10px;
+        }
+
+        /* Main App */
+        .app-container {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .mobile-menu-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 45px;
+            height: 45px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .sidebar-header {
+            padding: 25px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .menu-section {
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .menu-section-title {
+            padding: 15px 20px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #667eea;
+            text-transform: uppercase;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .menu-section-title:hover {
+            background: #f7fafc;
+        }
+
+        .menu-section-title .arrow {
+            transition: transform 0.3s;
+        }
+
+        .menu-section-title.collapsed .arrow {
+            transform: rotate(-90deg);
+        }
+
+        .menu-items {
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .menu-items.collapsed {
+            max-height: 0;
+        }
+
+        .menu-item {
+            padding: 12px 20px;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            background: #f7fafc;
+            color: #667eea;
+        }
+
+        .menu-item.active {
+            background: #eef2ff;
+            color: #667eea;
+            border-left: 4px solid #667eea;
+            font-weight: 600;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            margin-right: 12px;
+            width: 24px;
+        }
+
+        .menu-badge {
+            margin-left: auto;
+            background: #f56565;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .main-content {
+            margin-left: 280px;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .breadcrumb {
+            background: white;
+            padding: 15px 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .top-bar {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .content-area {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border-left: 4px solid;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card.completed { border-color: #48bb78; }
+        .stat-card.due { border-color: #ed8936; }
+        .stat-card.overdue { border-color: #f56565; }
+        .stat-card.exception { border-color: #718096; }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            color: #718096;
+            font-size: 14px;
+        }
+
+        .child-card {
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .child-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .child-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .status-urgent { background: #fed7d7; color: #c53030; }
+        .status-grace { background: #feebc8; color: #7c2d12; }
+        .status-active { background: #c6f6d5; color: #22543d; }
+
+        .child-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #718096;
+        }
+
+        .notification-item {
+            background: white;
+            border-left: 4px solid;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .notification-item:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .notification-item.urgent { border-left-color: #f56565; background: #fff5f5; }
+        .notification-item.warning { border-left-color: #ed8936; background: #fef5e7; }
+        .notification-item.success { border-left-color: #48bb78; background: #f0fdf4; }
+
+        .report-card {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .report-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #f7fafc;
+            font-weight: 600;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .modal-header {
+            padding: 25px 30px;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+
+        .close-btn {
+            font-size: 28px;
+            color: #718096;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: flex; }
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.active { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 80px 15px 20px 15px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+
+        .hide { display: none !important; }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+        .overlay.active { display: block; }
+
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filter-bar {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div style="text-align: center;">
+            <div class="loading-spinner"></div>
+            <div style="color: white; margin-top: 20px; font-weight: 600;">Saving...</div>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>EID Tracking System</h1>
+                <p style="color: #666; font-size: 14px;">Early Infant Diagnosis Management</p>
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+
+            <button class="btn btn-primary" style="width: 100%;" onclick="login()">Login</button>
+
+            <div class="login-links">
+                <a href="#" onclick="showRegister(); return false;">Create Account</a>
+                <span style="color: #cbd5e0;">|</span>
+                <a href="#" onclick="showForgotPassword(); return false;">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="app-container" id="mainApp">
+        <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>EID System</h2>
+                <p id="userFacility">Kabuta RHC</p>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-section-title" onclick="toggleSection(this)">
+                    📊 OVERVIEW <span class="arrow">▼</span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item active" onclick="navigateTo('dashboard')">
+                        <span class="menu-icon">📊</span>Dashboard
+                    </div>
+                    <div class="menu-item" onclick="navigateTo('notifications')">
+                        <span class="menu-icon">🔔</span>Notifications
+                        <span class="menu-badge">5</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-section-title" onclick="toggleSection(this)">
+                    👶 EID MANAGEMENT <span class="arrow">▼</span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="navigateTo('children')">
+                        <span class="menu-icon">👶</span>Children Registry
+                    </div>
+                    <div class="menu-item" onclick="navigateTo('tests')">
+                        <span class="menu-icon">🧪</span>Test Tracking
+                    </div>
+                    <div class="menu-item" onclick="navigateTo('analysis')">
+                        <span class="menu-icon">📈</span>Monthly Analysis
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" id="workflowSection">
+                <div class="menu-section-title" onclick="toggleSection(this)">
+                    ✅ WORKFLOW <span class="arrow">▼</span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="navigateTo('approvals')">
+                        <span class="menu-icon">✅</span>Pending Approvals
+                        <span class="menu-badge">3</span>
+                    </div>
+                    <div class="menu-item" onclick="navigateTo('referrals')">
+                        <span class="menu-icon">🔄</span>Referrals
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section" id="adminSection" style="display: none;">
+                <div class="menu-section-title" onclick="toggleSection(this)">
+                    🏥 ADMINISTRATION <span class="arrow">▼</span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="navigateTo('facilities')">
+                        <span class="menu-icon">🏥</span>Facilities
+                    </div>
+                    <div class="menu-item" onclick="navigateTo('users')">
+                        <span class="menu-icon">👥</span>Users
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-section-title" onclick="toggleSection(this)">
+                    📄 REPORTS <span class="arrow">▼</span>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item" onclick="navigateTo('reports')">
+                        <span class="menu-icon">📄</span>Reports
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <div class="menu-items" style="max-height: none;">
+                    <div class="menu-item" onclick="logout()">
+                        <span class="menu-icon">🚪</span>Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="breadcrumb">
+                <a href="#" onclick="navigateTo('dashboard'); return false;">Home</a>
+                <span>›</span>
+                <span id="breadcrumbCurrent">Dashboard</span>
+            </div>
+
+            <div class="top-bar">
+                <h1 id="pageTitle">Dashboard</h1>
+                <div>
+                    <div style="font-weight: 600;" id="userName">John Banda</div>
+                    <div style="font-size: 12px; color: #718096;" id="userRole">Facility Supervisor</div>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div class="content-area" id="dashboardPage">
+                <div class="stats-grid">
+                    <div class="stat-card completed" onclick="filterByStatus('completed')">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Completed Tests</div>
+                    </div>
+                    <div class="stat-card due" onclick="filterByStatus('due')">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Due This Month</div>
+                    </div>
+                    <div class="stat-card overdue" onclick="filterByStatus('overdue')">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Overdue</div>
+                    </div>
+                    <div class="stat-card exception" onclick="filterByStatus('exception')">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Exceptions</div>
+                    </div>
+                </div>
+
+                <h3>Enrolled Children</h3>
+                <div id="childrenContainer"></div>
+            </div>
+
+            <!-- Children Registry -->
+            <div class="content-area hide" id="childrenPage">
+                <div class="toolbar">
+                    <h3>Registered Children</h3>
+                    <button class="btn btn-success" onclick="showAddChild()">+ Add New Child</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="🔍 Search children..." onkeyup="searchChildren(this.value)">
+                </div>
+                <div id="childrenListContainer"></div>
+            </div>
+
+            <!-- Test Tracking -->
+            <div class="content-area hide" id="testsPage">
+                <h3>Test Tracking</h3>
+                <div class="filter-bar">
+                    <select id="testFilter" onchange="filterTests()">
+                        <option value="all">All Tests</option>
+                        <option value="pending">Pending</option>
+                        <option value="due">Due</option>
+                        <option value="overdue">Overdue</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
+                <div id="testsContainer"></div>
+            </div>
+
+            <!-- Monthly Analysis -->
+            <div class="content-area hide" id="analysisPage">
+                <h3>Monthly Analysis - 2025</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
+                    <div style="background: white; padding: 20px; border-radius: 12px; border: 2px solid #e2e8f0; text-align: center; cursor: pointer;" onclick="showMonthDetails('January')">
+                        <div style="font-weight: 700; color: #667eea;">January</div>
+                        <div style="font-size: 32px; font-weight: 700; margin: 10px 0;">15</div>
+                        <div style="font-size: 12px; color: #718096;">children due</div>
+                    </div>
+                    <div style="background: white; padding: 20px; border-radius: 12px; border: 2px solid #e2e8f0; text-align: center; cursor: pointer;" onclick="showMonthDetails('February')">
+                        <div style="font-weight: 700; color: #667eea;">February</div>
+                        <div style="font-size: 32px; font-weight: 700; margin: 10px 0;">12</div>
+                        <div style="font-size: 12px; color: #718096;">children due</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="content-area hide" id="notificationsPage">
+                <h3>Notifications Center</h3>
+                <div style="margin-top: 20px;">
+                    <div class="notification-item urgent">
+                        <div style="font-weight: 600; color: #c53030; margin-bottom: 5px;">⚠️ Urgent: Confirmatory Test Overdue</div>
+                        <div style="font-size: 14px; color: #718096;">Mary Mwape's confirmatory test is overdue. Please follow up immediately.</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 8px;">2 hours ago</div>
+                    </div>
+                    <div class="notification-item warning">
+                        <div style="font-weight: 600; color: #7c2d12; margin-bottom: 5px;">📋 Pending Approvals</div>
+                        <div style="font-size: 14px; color: #718096;">3 counsellor updates awaiting your approval</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 8px;">5 hours ago</div>
+                    </div>
+                    <div class="notification-item success">
+                        <div style="font-weight: 600; color: #22543d; margin-bottom: 5px;">✅ Test Completed</div>
+                        <div style="font-size: 14px; color: #718096;">John Mwansa's 6-week test completed - Negative result</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 8px;">1 day ago</div>
+                    </div>
+                    <div class="notification-item warning">
+                        <div style="font-weight: 600; color: #7c2d12; margin-bottom: 5px;">📅 Tests Due This Week</div>
+                        <div style="font-size: 14px; color: #718096;">2 children have tests due within the next 7 days</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 8px;">2 days ago</div>
+                    </div>
+                    <div class="notification-item success">
+                        <div style="font-weight: 600; color: #22543d; margin-bottom: 5px;">👶 New Child Registered</div>
+                        <div style="font-size: 14px; color: #718096;">Grace Mutale has been successfully enrolled in the EID program</div>
+                        <div style="font-size: 12px; color: #999; margin-top: 8px;">3 days ago</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pending Approvals -->
+            <div class="content-area hide" id="approvalsPage">
+                <h3>Pending Approvals</h3>
+                <div style="margin-top: 20px;">
+                    <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #e2e8f0;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <div>
+                                <div style="font-weight: 600; color: #2d3748;">Home Visit - Mary Mwape</div>
+                                <div style="font-size: 13px; color: #718096; margin-top: 5px;">Submitted by: Jane Musonda (Lay Counsellor)</div>
+                            </div>
+                            <span class="status-badge status-grace">PENDING</span>
+                        </div>
+                        <div style="font-size: 14px; color: #4a5568; margin-bottom: 15px;">
+                            <strong>Visit Notes:</strong> Visited home for confirmatory test follow-up. Mother confirmed child will come tomorrow morning.
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <button class="btn btn-success" onclick="approveUpdate(1)">Approve</button>
+                            <button class="btn btn-secondary" onclick="rejectUpdate(1)">Reject</button>
+                        </div>
+                    </div>
+
+                    <div style="background: #f7fafc; padding: 20px; border-radius: 8px; margin-bottom: 15px; border: 2px solid #e2e8f0;">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <div>
+                                <div style="font-weight: 600; color: #2d3748;">Follow-up Visit - John Mwansa</div>
+                                <div style="font-size: 13px; color: #718096; margin-top: 5px;">Submitted by: Jane Musonda (Lay Counsellor)</div>
+                            </div>
+                            <span class="status-badge status-grace">PENDING</span>
+                        </div>
+                        <div style="font-size: 14px;
